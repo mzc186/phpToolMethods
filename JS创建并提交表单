@@ -22,3 +22,14 @@
             form.method = "post";
             form.action = $.action.url("ImportExcel1", null, "CommonInfo", "CommonX6Api");
             form.submit();
+
+
+            function exportExcel(eleid){
+                        var form=document.getElementById(eleid).cloneNode(true);
+                        var exportExcel=generateHideElement('export',1);
+                        form.appendChild(exportExcel);
+                        //form.action='';
+                        document.body.appendChild(form);
+                        form.submit();
+                        form.parentNode.removeChild(form);
+            }
