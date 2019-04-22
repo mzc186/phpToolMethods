@@ -33,10 +33,7 @@ function exportExcel($title=array(), $data=array(), $fileName='', $savePath='./'
         $_row++;  
     }  
 
-   
-
     //填写数据  
-
     if($data){  
         $i = 0;  
         foreach($data AS $_v){  
@@ -49,8 +46,7 @@ function exportExcel($title=array(), $data=array(), $fileName='', $savePath='./'
         }  
     }  
 
-       
-
+     
     //文件名处理  
     if(!$fileName){  
         $fileName = uniqid(time(),true);  
