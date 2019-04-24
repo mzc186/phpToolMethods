@@ -39,6 +39,8 @@
 				$j = 0;
 				foreach($_v AS $_cell){
 					$obj->getActiveSheet(0)->setCellValue($cellName[$j] . ($i+$_row), $_cell,PHPExcel_Cell_DataType::TYPE_STRING);
+					$obj->getActiveSheet()->getStyle($cellName[$j] . ($i+$_row))->getNumberFormat()
+						->setFormatCode(PHPExcel_Style_NumberFormat::FORMAT_TEXT);
 					$j++;
 				}
 				$i++;
